@@ -1,1 +1,26 @@
 @import "bootstrap/scss/bootstrap";
+
+body {
+    padding-top: 10rem;
+}
+
+@media (max-width:992px) {
+    
+    .navbar-brand {
+        font-size: 48px;
+    }
+    .dropdown-item {
+        font-size:32px;
+    }
+    
+    li {
+        font-size: 32px;
+    }
+}
+
+@media (min-width:992px){
+
+    .navbar-brand {
+        font-size:32px
+    }
+}
