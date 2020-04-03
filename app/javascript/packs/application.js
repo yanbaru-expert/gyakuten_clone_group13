@@ -16,3 +16,11 @@ require("bootstrap/dist/js/bootstrap")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+<script>
+	$('.navbar-nav>li>a , .dropdown-menu>a').on('click', function(){
+			if(this.id != 'navbarDropdown'){
+				$('.navbar-collapse').collapse('hide');
+			}
+	});
+</script>
