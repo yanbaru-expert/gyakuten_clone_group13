@@ -1,4 +1,6 @@
-class Question < ApplicationRecord
+class ImportCsv < ApplicationRecord
+
+  path = 'db/csv_data/question_data.csv'
 
   def self.import(path)
      CSV.foreach(path, headers: true) do |row|
@@ -8,5 +10,4 @@ class Question < ApplicationRecord
        )
      end
   end
-
 end
