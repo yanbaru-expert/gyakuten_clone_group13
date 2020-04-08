@@ -8,7 +8,7 @@ namespace :import_csv do
 
   task questions: :environment do
 
-    path = File.join Rails.root, "db/csv_data/csv_data.csv"
+    path = File.join Rails.root, "db/csv_data/question_data.csv"
 
     list = []
 
