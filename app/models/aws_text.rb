@@ -1,0 +1,2 @@
+class AwsText < ApplicationRecord
+end
