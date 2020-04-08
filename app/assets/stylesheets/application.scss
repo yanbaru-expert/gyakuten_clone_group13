@@ -38,7 +38,19 @@ body {
 @media (max-width:992px) {
 	p {
 		font-size: 35px;
-	}
+    }
+    
+    h2 {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    
     //ナビバーのスタイル
     .navbar-brand {
         font-size: 48px;
@@ -53,7 +65,12 @@ body {
 	//awsテーブルのスタイル
 	.aws-container {
 		font-size: 24px;
-	}
+    }
+    //awsテキストのスタイル
+    .aws-content {
+        width: 710px;
+        line-height: 60px;
+    }
 }
 
 @media (min-width:992px){
