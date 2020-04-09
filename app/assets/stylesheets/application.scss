@@ -1,5 +1,6 @@
 @import "bootstrap/scss/bootstrap";
 
+//questionsテーブルのスタイル
 .box1 {
     padding: 60px;
     margin-bottom: 10px;
@@ -13,4 +14,51 @@
 .box1 p {
     margin: 0;
     padding: 0;
+}
+
+body {
+    padding-top: 10rem;
+}
+.container {
+	margin-bottom: 90px;
+}
+
+//awsテーブルのスタイル
+.aws-thead {
+	background-color: #5C99FF;
+	color: white;
+}
+.aws-index {
+	font-weight: normal;
+}
+.aws-title {
+	color: #5C99FF;
+}
+
+@media (max-width:992px) {
+	p {
+		font-size: 35px;
+	}
+    //ナビバーのスタイル
+    .navbar-brand {
+        font-size: 48px;
+    }
+    .dropdown-item {
+        font-size:32px;
+    }
+    li {
+        font-size: 32px;
+	}
+
+	//awsテーブルのスタイル
+	.aws-container {
+		font-size: 24px;
+	}
+}
+
+@media (min-width:992px){
+
+    .navbar-brand {
+        font-size:32px
+    }
 }
