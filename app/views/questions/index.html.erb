@@ -1,29 +1,32 @@
 <div class="container">
   <h1>新規投稿</h1>
-  <form action="/questions" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="98i3OuqL1LTkq05ueGlt4h/LeujVq7gh0R3JV5ygXLL+3ZDEu10W+dYiPobbQSID0oUeTpzjYawMusUgreL/LQ==" />
+  <form action="/questions" accept-charset="UTF-8" method="post">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="hidden" name="authenticity_token" value="98i3OuqL1LTkq05ueGlt4h/LeujVq7gh0R3JV5ygXLL+3ZDEu10W+dYiPobbQSID0oUeTpzjYawMusUgreL/LQ==" />
 
-    <div class="form-group">
+  <div class="form-group">
       <label class="control-label" for="question_title">【質問】</label>
-      <textarea class="form-control initial-height
-                            " rows="3" name="question[title]" id="question_title">
-</textarea>
-    </div>
-    <div class="form-group">
+      <textarea class="form-control initial-height" rows="3" name="question[title]" id="question_title">
+      </textarea>
+  </div>
+  <div class="form-group">
       <label class="control-label" for="question_details">【詳細】</label>
-      <textarea class="form-control initial-height
-                            " rows="5" name="question[details]" id="question_details">
-</textarea>
-    </div>
+      <textarea class="form-control initial-height" rows="5" name="question[details]" id="question_details">
+      </textarea>
+  </div>
     <div class="form-group">
       <input type="submit" name="commit" value="送信" class="btn btn-primary btn-block btn-lg" data-confirm="新規投稿しますか？" data-disable-with="送信" />
     </div>
-</form></div>
+ </form>
 
-<% @questions.each do |question| %>
 
-<div class="box1">
+  <% @questions.each do |question| %>
+
+  <div class="question">
     <p><%= question.title %></p>
-</div>
-
+  </div>
 
   <% end %>
+
+
+</div>  

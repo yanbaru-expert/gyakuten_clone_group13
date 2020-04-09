@@ -1,7 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 
 //questionsテーブルのスタイル
-.box1 {
+.question {
     padding: 60px;
     margin-bottom: 10px;
     border: 1px solid #333333;
@@ -11,7 +11,7 @@
     border-radius: 5px;
 }
 
-.box1 p {
+.question p {
     margin: 0;
     padding: 0;
 }
