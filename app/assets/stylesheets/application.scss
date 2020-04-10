@@ -62,3 +62,21 @@ body {
         font-size:32px
     }
 }
+
+  //ログイン画面
+  .log_in{
+  @extend .container-fluid;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+
+// 「ログインしました」などのフラッシュ用スタイル
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
