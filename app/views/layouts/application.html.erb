@@ -10,9 +10,20 @@
   </head>
 
   <body>
+
+
+    <% if flash[:alert] %>
+   <div class="alert alert-danger"><%= flash[:alert] %>
+     <button type="button" class="close" data-dismiss="alert">&times;</button>
+   </div>
+  <% end %>
+
+
+
+
     <%= render "layouts/header" %>
     <%= render "layouts/footer" %>
     <%= yield %>
-    
+
   </body>
 </html>
