@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="border-bottom">
+    <p>【質問】</p>
+    <p><%= @question.title %></p>
+  </div>
+  <div class="border-bottom mt-5">
+    <p>【詳細】</p>
+    <p><%= @question.body %></p>
+  </div>
+  <div class="mt-5">
+    <% @solutions.each do |solution|  %>
+      <p>【回答】</p>
+      <p><%= solution.answer %></p>
+    <% end  %>
+  </div>
+</div>
