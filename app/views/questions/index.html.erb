@@ -23,7 +23,7 @@
   <% @questions.each do |question| %>
 
   <div class="question">
-    <p><%= question.title %></p>
+    <p><%= link_to question.title, question_path(question.id)  %></p>
   </div>
 
   <% end %>
