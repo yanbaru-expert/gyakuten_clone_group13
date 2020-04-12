@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'activeadmin'
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'rails-i18n'
 gem 'kaminari'
 gem 'coderay'

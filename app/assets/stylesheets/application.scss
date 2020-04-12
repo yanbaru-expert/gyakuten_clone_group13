@@ -17,8 +17,9 @@
 }
 
 body {
-    padding-top: 10rem;
+    padding-top: 4.5rem;
 }
+
 .container {
 	margin-bottom: 90px;
 }
@@ -76,6 +77,23 @@ body {
 @media (min-width:992px){
 
     .navbar-brand {
-        font-size:32px
+      font-size:32px
     }
+}
+
+  //ログイン画面
+  .log_in{
+  @extend .container-fluid;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+// 「ログインしました」などのフラッシュ用スタイル
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
 }
