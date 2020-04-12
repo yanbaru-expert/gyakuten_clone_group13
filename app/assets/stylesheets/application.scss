@@ -74,7 +74,7 @@ body {
 // 「ログインしました」などのフラッシュ用スタイル
 
 .alert-notice {
-  @extend .alert-danger;
+  @extend .alert-info;
 }
 
 .alert-alert {
