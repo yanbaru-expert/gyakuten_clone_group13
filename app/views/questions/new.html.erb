@@ -1,0 +1,17 @@
+<%= form_with model: @question, method: :post, local: true do |f|%>
+
+    <div class='form-group'>
+      <%= f.label :title, "【質問】", for: 'question_title' %>
+      <%= f.text_area :title, class:'form-control', id: 'question_title', rows: '3'%>
+    </div>
+
+    <div class='form-group'>
+      <%= f.label :body, "【詳細】", for: 'question_body' %>
+      <%= f.text_area :body, class:'form-control', id: 'question_body', rows: '5'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit '送信', class: "btn btn-primary btn-block btn-lg", data: {confirm: "新規登録しますか？"} %>
+    </div>
+
+  <% end %>

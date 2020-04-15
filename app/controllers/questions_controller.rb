@@ -4,11 +4,18 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
+  def new
+    @question = Question.new
+  end
+
   def create
     @question = Question.new(question_params)
     if @question.save
+      flash.notice = "質問を投稿しました。"
       redirect_to action: :index
     else
+      flash.now[:alert] = "内容が入力されていません。"
+      @questions = Question.all
       render :index
     end
   end
