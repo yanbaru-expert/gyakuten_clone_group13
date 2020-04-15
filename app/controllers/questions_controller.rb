@@ -4,10 +4,6 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
-  def new
-    @question = Question.new
-  end
-
   def create
     @question = Question.new(question_params)
     if @question.save
@@ -16,6 +12,7 @@ class QuestionsController < ApplicationController
     else
       flash.now[:alert] = "内容が入力されていません。"
       @questions = Question.all
+      @question = Question.new
       render :index
     end
   end
