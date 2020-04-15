@@ -1,13 +1,5 @@
 class SolutionsController < ApplicationController
 
-   def index
-     @solutions = Solution.all
-    end
-
-    def new
-      @solution = Solution.new
-    end
-
     def create
       Solution.create(solution_params)
     end

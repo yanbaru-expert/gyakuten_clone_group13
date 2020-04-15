@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   resources :questions
 
+  resources :questions do
   resources :solutions
+end
 
   resources :aws_texts, only:["index", "show"]
 
