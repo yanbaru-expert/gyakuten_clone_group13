@@ -18,6 +18,17 @@
 
   <div class="container">
     <h1>回答投稿</h1>
+
+    <% if @solution.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <ul>
+        <% @solution.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <%= form_with model: [@question, @solution], local: true do |f| %>
 
   <div class="form-group">
