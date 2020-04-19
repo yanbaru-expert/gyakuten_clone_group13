@@ -5,7 +5,7 @@ class SolutionsController < ApplicationController
     @solution = @question.solutions.build(solution_params)
 
       if @solution.save
-          redirect_to question_path(question.id)
+          redirect_to question_path(@question.id)
           flash[:notice] = "回答を投稿しました"
       else
         @solutions = Solution.all
