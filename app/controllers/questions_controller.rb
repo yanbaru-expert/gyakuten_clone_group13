@@ -3,7 +3,6 @@ class QuestionsController < ApplicationController
   def index
     @question = Question.new
     @questions = Question.all
-    
   end
 
   def create
@@ -18,9 +17,10 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def show 
+  def show
     @question = Question.find(params[:id])
     @solutions = @question.solutions.all
+    @solution  = @question.solutions.new
   end
 
   private
