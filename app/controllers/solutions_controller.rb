@@ -1,15 +1,17 @@
 class SolutionsController < ApplicationController
 
   def create
-      question = Question.find_by(id: params[:question_id])
-      @solution = question.solutions.build(solution_params)
+    @question = Question.find_by(id: params[:question_id])
+    @solution = @question.solutions.build(solution_params)
+
       if @solution.save
           redirect_to question_path(question.id)
           flash[:notice] = "回答を投稿しました"
       else
-          #render "questions/show"　
-          redirect_to question_path(question.id)
-      end
+        @solutions = Solution.all
+        render "questions/show"
+        flash.now[:alert] = "【回答】は空欄にできません"
+       end
 
     end
 
