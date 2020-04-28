@@ -1,7 +1,11 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.where(category: params[:category])
+    if params[:category]
+      @movies = Movie.where(category: params[:category]).page(params[:page]).per(10)
+    else
+      @movies = Movie.where(category: "Ruby on Rails").page(params[:page]).per(10)
+    end
   end
 
 end
