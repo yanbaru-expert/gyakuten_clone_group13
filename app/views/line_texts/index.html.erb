@@ -1,0 +1,23 @@
+<div class="container line-container">
+
+  <h2 class="text-center text-success">LINE@</h2>
+ <div class="table-container">
+   <table class="table table-striped">
+     <thead class="bg-success text-white">
+      <tr>
+        <th class="w-1">No.</th>
+       <th class="w-2">ジャンル</th>
+       <th class="w-5">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @line_texts.each do |line_text|  %>
+        <tr>
+          <td><%= line_text.id %></th>
+          <td><%= line_text.genre %></td>
+          <td><%= link_to line_text.title, line_text_path(line_text.id)%></td>
+        </tr>
+      <% end  %>
+    </tbody>
+  </table>
+</div>

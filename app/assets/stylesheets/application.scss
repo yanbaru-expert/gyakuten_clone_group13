@@ -42,11 +42,27 @@ body {
 	color: #5C99FF;
 }
 
+//lineテーブルのスタイル
+.line-thead {
+	background-color: #28a745;
+	color: white;
+}
+.line-index {
+	font-weight: normal;
+}
+.line-title {
+	color: #28a745;
+}
+
+.line_title {
+  color: #28a745;
+}
+
 @media (max-width:992px) {
 	p {
 		font-size: 35px;
     }
-    
+
     h2 {
         font-size: 45px;
         font-weight: bold;
@@ -57,7 +73,7 @@ body {
         font-weight: bold;
     }
 
-    
+
     //ナビバーのスタイル
     .navbar-brand {
         font-size: 48px;

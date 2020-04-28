@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   end
 
   resources :aws_texts, only:["index", "show"]
+  resources :line_texts, only: [:index, :show]
 
 end

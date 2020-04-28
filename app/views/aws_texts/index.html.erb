@@ -14,7 +14,7 @@
       <% @aws_texts.each do |aws_text|  %>
         <tr>
           <th scope="row" class="aws-index"><%= aws_text.id %></th>
-          <td class="aws-title"><%= link_to aws_text.title, aws_text_path(aws_text.id)%></td>
+          <td class="aws-title"><%= link_to aws_text.title, aws_text_path(aws_text.id) %></td>
         </tr>
       <% end  %>
     </tbody>
