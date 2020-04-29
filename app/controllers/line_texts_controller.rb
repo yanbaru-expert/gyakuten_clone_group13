@@ -6,4 +6,5 @@ class LineTextsController < ApplicationController
   def show
     @line_text = LineText.find(params[:id])
   end
+
 end
