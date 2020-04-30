@@ -4,10 +4,11 @@ namespace :csv_import do
 
   desc "csvファイルのデータをmoviesテーブルにインポートする"
   task movies: :environment do
-    path = File.join Rails.root, "db/csv_data/movie_data.csv"
+    path = File.join Rails.root, "db/csv_data/all_movie_data.csv"
     list = []
     CSV.foreach(path, headers: true) do |row|
       list << {
+        category: row["category"], 
         title: row["title"], 
         url: row["url"]
       }
