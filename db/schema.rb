@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(version: 2020_04_28_123017) do
   end
 
   create_table "line_texts", force: :cascade do |t|
-    t.string "title"
     t.string "genre"
-    t.text "contents"
+    t.string "title"
+    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
