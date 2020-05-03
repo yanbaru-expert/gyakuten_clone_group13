@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2020_04_28_123017) do
     t.text "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "category"
   end
 
   create_table "questions", force: :cascade do |t|
