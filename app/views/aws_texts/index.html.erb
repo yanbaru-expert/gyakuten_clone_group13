@@ -1,22 +1,23 @@
 <div class="container aws-container">
-  <div>
-    <h1 class="text-center">AWS講座</h1>
-    <p>注意！！！：AWSのEC2やRDSは有料サービスとなります。無駄な料金を請求されないためにも、不要なインスタンスは停止・削除をしてください。</p>
-  </div>
-  <table class="table table-striped">
-    <thead class="aws-thead">
-      <tr>
-        <th scope="col aws-index">No.</th>
-        <th scope="col">内容</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @aws_texts.each do |aws_text|  %>
-        <tr>
-          <th scope="row" class="aws-index"><%= aws_text.id %></th>
-          <td class="aws-title"><%= link_to aws_text.title, aws_text_path(aws_text.id)%></td>
-        </tr>
-      <% end  %>
-    </tbody>
-  </table>
+ <div>
+   <h1 class="text-center">AWS講座</h1>
+   <p>注意！！！：AWSのEC2やRDSは有料サービスとなります。無駄な料金を請求されないためにも、不要なインスタンスは停止・削除をしてください。</p>
+ </div>
+ <table class="table table-striped">
+   <thead class="aws-thead">
+     <tr>
+       <th scope="col aws-index">No.</th>
+       <th scope="col">内容</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @aws_texts.each do |aws_text|  %>
+             <tr>
+               <th scope="row" class="aws-index"><%= aws_text.id %></th>
+               <td class="aws-title"><%= link_to aws_text.title, aws_text_path(aws_text.id)%></td>
+             </tr>
+           <% end  %>
+   </tbody>
+ </table>
+
 </div>

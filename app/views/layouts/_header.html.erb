@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top " style="background-color:#5C99FF;">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: <%= nav_color  %>">
   <%= link_to "Gyakuten", root_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1" aria-controls="nav1" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
       <li class="nav-item"><%= link_to "情報発信", root_path(category: "Marketing"), class: "nav-link active" %></li>
       <li class="nav-item"><%= link_to "動画編集講座", root_path(category: "Movie"), class: "nav-link active" %></li>
       <li class="nav-item"><%= link_to "ライティング講座", root_path(category: "Writing"), class: "nav-link active" %></li>
-      <li class="nav-item"><a href="#" class="nav-link active">LINE@</a></li>
+      <li class="nav-item"><%= link_to "LINE@", line_texts_path, class: "nav-link active" %></li>
       <li class="nav-item">
         <% if user_signed_in? %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link active" %>

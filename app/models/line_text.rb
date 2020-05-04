@@ -1,0 +1,2 @@
+class LineText < ApplicationRecord
+end
