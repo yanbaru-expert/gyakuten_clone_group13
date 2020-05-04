@@ -8,7 +8,7 @@
       <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Rails</a>
         <div class="dropdown-menu">
           <%= link_to "動画教材", root_path, class: "dropdown-item", style: "color: #5C99FF" %>
-          <a href="#" class="dropdown-item" style="color:#5C99FF">テキスト教材</a>
+          <%= link_to "テキスト教材", rails_texts_path, class: "dropdown-item", style: "color: #5C99FF" %>
           <%= link_to "ライブコーディング", root_path(category: "Live"), class: "dropdown-item", style: "color: #5C99FF" %>
           <a href="/questions" class="dropdown-item" style="color:#5C99FF">質問集</a>
         </div>
