@@ -2,6 +2,11 @@ module ApplicationHelper
   require "redcarpet"
   require "coderay"
 
+end
+
+def nav_color
+    controller_name == 'line_texts' ?  '#28a745' : '#5C99FF'
+  end
 
   class HTMLwithCoderay < Redcarpet::Render::HTML
     def block_code(code, language)
@@ -24,6 +29,7 @@ module ApplicationHelper
 
         CodeRay.scan(code, lang).div
     end
+
   end
 
   def markdown(text)
@@ -46,5 +52,3 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(html_render, options)
     markdown.render(text)
   end
-
-end
