@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     resources :solutions, only: [:create]
   end
 
+  resources :rails_texts do
+  get :search, on: :collection
+end
+
   resources :aws_texts, only:["index", "show"]
   resources :line_texts, only: [:index, :show]
 
