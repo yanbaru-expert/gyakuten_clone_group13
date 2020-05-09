@@ -1,0 +1,18 @@
+<div class="cover text-center">
+  <div class="rails_texts-wrapper">
+  <div class="contents-title">
+      <%= render "layouts/search_rails_text" %>
+    <h2>テキスト教材</h2>
+  </div>
+  <div class="rails_texts-contents">
+    <% @rails_texts.each do |rails_text| %>
+      <div class="rails_texts-content">
+        <%= link_to rails_text_path(rails_text.id), {:target => "_blank"} do %>
+          <h3><%= rails_text.title %></h3>
+          <p><%= "【#{rails_text.genre}】" %></p>
+          <% end %>
+     </div>
+     <% end %>
+    </div>
+  </div>
+  </div>

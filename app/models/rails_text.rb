@@ -1,0 +1,3 @@
+class RailsText < ApplicationRecord
+
+end

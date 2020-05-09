@@ -1,9 +1,35 @@
 @import "bootstrap/scss/bootstrap";
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
 
 body {
  padding-top: 4.5rem;
 }
 
+//railsテキストのテーブル
+.hidden {
+  display: none;
+}
+
+form.search-form {
+  padding: 20px 0px 10px 0px;
+  position: relative;
+  max-width: 350px;
+
+  i.search-icon {
+    position: absolute;
+    top: 45%;
+    left: 20px;
+    z-index: 11;
+  }
+
+  input.search-rails_text {
+    padding-left: 50px;
+  }
+}
 
 //questionsテーブルのスタイル
 .question {

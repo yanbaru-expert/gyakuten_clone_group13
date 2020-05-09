@@ -2,6 +2,7 @@ require 'csv'
 
 
 namespace :import_csv do
+
   desc "動画教材のCSVデータをインポートするタスク"
   task movies: :environment do
     path = File.join Rails.root, "db/csv_data/movie_data.csv"
@@ -18,6 +19,26 @@ namespace :import_csv do
       puts "インポート完了"
     rescue ActiveModel::UnknownAttributeError => invalid
       puts "インポートに失敗しました:UnknownAttributeError"
+    end
+  end
+
+  desc "RailsテキストのCSVデータをインポートするタスク"
+  task rails_texts: :environment do
+    path = File.join Rails.root, "db/csv_data/rails_text_data.csv"
+    list = []
+    CSV.foreach(path, headers: true) do |row|
+      list << {
+        genre: row["genre"],
+        title: row["title"],
+        content: row["content"]
+      }
+    end
+    puts "インポート処理を開始"
+    begin
+      RailsText.create!(list)
+      puts "インポート完了!!"
+    rescue ActiveModel::UnknownAttributeError => invalid
+      puts "インポートに失敗：UnknownAttributeError"
     end
   end
 
@@ -61,7 +82,7 @@ namespace :import_csv do
     end
   end
 
-  
+
   desc "LINE@のCSVデータをインポートするタスク"
   task line_texts: :environment do
     path = File.join Rails.root, "db/csv_data/line_text_data.csv"

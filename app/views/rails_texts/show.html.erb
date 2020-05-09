@@ -1,0 +1,4 @@
+<div class="container rails-content mx-auto">
+  <%= markdown(@rails_text.content).html_safe %>
+  <%= yield :footer %>
+</div>
