@@ -4,15 +4,15 @@
 </form>
 
 <!--jQueryの読み込みの後に、以下のコードを追加 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <script>
-  <script>
   $(function(){
     $('#search-rails_text').keyup(function(){
-      search-rails_text = $("#search-rails_text").val();
-      $('.rails_texts-content h3').each(function(){
-        val = $(this).text();
-        if (val.match(search-rails_text) {
+        const $railsText = $("#search-rails_text").val().toLowerCase()
+        $('.rails_texts-content').each(function(){
+            const val = $(this).text();
+        if (val.toLowerCase().includes($railsText)) {
           $(this).show();
         } else {
           $(this).hide();
