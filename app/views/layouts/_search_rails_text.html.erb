@@ -2,22 +2,3 @@
   <i class="fa fa-search search-icon" title="Search"></i>
   <input type="text" id="search-rails_text" class='form-control search-rails_text' placeholder="教材を探す" aria-label="Username" aria-describedby="search-form">
 </form>
-
-<!--jQueryの読み込みの後に、以下のコードを追加 -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-<script>
-  $(function(){
-    $('#search-rails_text').keyup(function(){
-        const $railsText = $("#search-rails_text").val().toLowerCase()
-        $('.rails_texts-content').each(function(){
-            const val = $(this).text();
-        if (val.toLowerCase().includes($railsText)) {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-      });
-    });
-  });
-</script>
