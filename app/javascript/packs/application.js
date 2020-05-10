@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("bootstrap/dist/js/bootstrap")
+require('jquery')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -16,3 +17,19 @@ require("bootstrap/dist/js/bootstrap")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+document.addEventListener('turbolinks:load', () => {
+    $(function () {
+        $('#search-rails_text').keyup(function () {
+            const $railsText = $("#search-rails_text").val().toLowerCase()
+            $('.rails_texts-content').each(function () {
+                const val = $(this).text();
+                if (val.toLowerCase().includes($railsText)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    });
+})
