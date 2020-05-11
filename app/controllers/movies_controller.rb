@@ -8,4 +8,14 @@ class MoviesController < ApplicationController
     end
   end
 
+  def create
+
+   @post = Post.new(post_params)
+
+   url = params[:post][:youtube_url]
+   url = url.last(11)
+   @post.youtube_url = url
+
+end
+
 end
