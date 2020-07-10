@@ -4,9 +4,13 @@
       <%= render "layouts/search_rails_text" %>
     <h2>テキスト教材</h2>
   </div>
-  <div class="rails_texts-contents">
+
+  <div class="row">
+    <div class="rails_texts-contents">
     <% @rails_texts.each do |rails_text| %>
-      <div class="rails_texts-content">
+    </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="rails_texts-content">
         <%= link_to rails_text_path(rails_text.id), {:target => "_blank"} do %>
           <h3><%= rails_text.title %></h3>
           <p><%= "【#{rails_text.genre}】" %></p>
