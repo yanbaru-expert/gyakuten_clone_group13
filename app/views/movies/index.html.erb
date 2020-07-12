@@ -1,8 +1,8 @@
 <div class="container text-center">
   <% @movies.each do |movie| %>
-	<p><%= movie.title %></p>
-	<iframe width="560" height="315" src=<%= "#{movie.url}"%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  <p><%= movie.title %></p>
+    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/<%=movie.url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+    <td><%= link_to 'Show', movie %></td>
   <% end  %>
   <p><%= paginate @movies %></p>
 </div>
-
